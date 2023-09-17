@@ -1,0 +1,17 @@
+/* styles.css */
+
+.navbar a.navbar-brand {
+  color: #5a5a5a !important; /* Color de texto gris */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  text-decoration: none; /* Eliminar subrayado */
+  margin-right: 20px; /* Espaciado entre elementos */
+}
+
+body {
+  background-image: url("/frontend/images/fondo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* styles.css */

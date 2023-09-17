@@ -1,0 +1,76 @@
+{% extends 'menu.html' %} {% block title %}Perfil de Usuario - Banca Web{%
+endblock %} {% block content %}
+<style>
+  .btn-primary {
+    background-color: #592e83;
+    border-color: #592e83;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+</style>
+<div class="container">
+  <h1 class="text-center"><i class="fas fa-user"> Perfil de Usuario</i></h1>
+  <div class="d-flex justify-content-center">
+    <div class="card mt-4">
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <i class="fas fa-user-circle">
+              <strong>Nombre de Usuario:</strong> {{ username }}</i
+            >
+          </li>
+          <li class="list-group-item">
+            <i class="fas fa-user"> <strong>Nombre:</strong> {{ name }}</i>
+          </li>
+          <li class="list-group-item">
+            <i class="fas fa-id-card"> <strong>DNI:</strong> {{ dni }}</i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center mt-4">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">
+          <i class="fas fa-lock"></i> Cambiar Contraseña
+        </h2>
+        <form method="post">
+          <div class="mb-3">
+            <label for="contrasena_actual"
+              ><i class="fas fa-key"></i> Contraseña Actual:</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="contrasena_actual"
+              name="contrasena_actual"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="nueva_contrasena"
+              ><i class="fas fa-key"></i> Nueva Contraseña:</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="nueva_contrasena"
+              name="nueva_contrasena"
+              required
+            />
+          </div>
+          <center>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-check"></i> Cambiar Contraseña
+            </button>
+          </center>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
